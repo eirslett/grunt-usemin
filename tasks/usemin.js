@@ -11,7 +11,7 @@ var inspect = function (obj) {
 //  - the default one
 var getFlowFromConfig = function(config, target) {
   var Flow = require('../lib/flow');
-  var flow = new Flow({ steps: {'js': ['concat', 'uglifyjs'], 'css': ['concat', 'cssmin']}, post: {}});
+  var flow = new Flow({ steps: {'js': ['concat', 'uglifyjs'], 'css': ['cssmin']}, post: {}});
   if (config.options && config.options.flow) {
     if (config.options.flow[target]) {
       flow.setSteps(config.options.flow[target].steps);
